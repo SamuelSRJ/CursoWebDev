@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamentos - static, relative, absolute e fixed</title>
+    <style type="text/css">
+        body{
+            background: #007fc7;
+        }
+        #container{
+            background: #FFF;
+            width: 800px;
+            margin: 10px auto;
+            padding: 10px;
+        }
+        h1{
+
+        }
+        p{
+            width: 250px;
+        }
+        .absolute{
+            border: 1px solid red;
+            position: absolute;
+        }
+        .fixed{
+            border: 1px solid red;
+            background: #FFF;
+            position: fixed;
+            bottom: 80px;
+            right: 0px;
+        }
+        .relative{
+            border: 1px solid red;
+            position: relative;
+            top: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Posicionamentos</h1>
+        <p>P1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat porttitor dolor, at feugiat ligula sagittis ac. 
+            Morbi finibus eros ut metus laoreet, ut ultrices augue viverra. 
+            Cras congue mi nec metus dignissim, id porttitor turpis ullamcorper. 
+            Fusce vitae dui non erat ultricies lobortis sit amet id velit.
+        </p>
+        <p class="fixed">P2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat porttitor dolor, at feugiat ligula sagittis ac. 
+            Morbi finibus eros ut metus laoreet, ut ultrices augue viverra. 
+            Cras congue mi nec metus dignissim, id porttitor turpis ullamcorper. 
+            Fusce vitae dui non erat ultricies lobortis sit amet id velit.
+        </p>
+        <p>P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat porttitor dolor, at feugiat ligula sagittis ac. 
+            Morbi finibus eros ut metus laoreet, ut ultrices augue viverra. 
+            Cras congue mi nec metus dignissim, id porttitor turpis ullamcorper. 
+            Fusce vitae dui non erat ultricies lobortis sit amet id velit.
+        </p>
+    </div>
+</body>
+</html>
