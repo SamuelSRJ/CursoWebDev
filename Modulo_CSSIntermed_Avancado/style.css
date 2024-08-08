@@ -1,0 +1,52 @@
+/*
+
+* { 
+    color: red;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+li>a{
+    text-decoration: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+h1+p{
+    color: green;
+}
+
+h1˜p{
+    color: green;
+}
+
+===== SELETORES IGUAIS, EXCEÇÃO IMPORTANT =====
+
+#pagina p {
+    color: red !important; <== Essa regra será aplicada mesmo aparecendo antes da outra.
+}
+
+#pagina p {
+    color: red;
+}
+
+===== ESPECIFICIDADE =====
+
+* { <== Quarto
+    color: red;
+}
+
+h2 { <== Terceiro
+    color: blue;
+}
+
+h2.verde { <== Segundo
+    color: green;
+}
+
+h2#amarelo { <== Primeiro
+    color: yellow;
+}
+
+*/

@@ -1,0 +1,39 @@
+/*
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    border: 1px solid red;
+    padding: 5px 20px;
+    background: url(images/seta.png) no-repeat left center;
+}
+*/
+
+body{
+    font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+ul a{
+    width: 200px;
+    height: 40px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-indent: 40px;
+    line-height: 40px;
+    background: url(images/menu.png);
+}
+
+ul a:hover{
+    background-position: right bottom;
+    color: #fff
+}
