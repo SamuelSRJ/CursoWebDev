@@ -1,0 +1,51 @@
+body {
+    font-family: "Helvetica", sans-serif;
+}
+
+header {
+    border: 1px solid red;
+    background: gray;
+}
+
+nav {
+    border: 1px solid green;
+    background: yellow;
+}
+
+footer {
+    border: 1px solid blue;
+    background: pink;
+}
+
+article {
+    background: gray;
+    border: 1px solid black;
+}
+
+section {
+    width: 450px;
+    height: 450px;
+    background: white;
+    border: 1px dashed red;
+    margin: 10px;
+    float: left;
+}
+
+section h3,
+section p,
+section span {
+    margin-left: 10px;
+}
+
+section h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.clear {
+    clear: both;
+}
+
+aside {
+    background: brown;
+}
