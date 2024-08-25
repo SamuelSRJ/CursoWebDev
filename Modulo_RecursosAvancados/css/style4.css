@@ -1,0 +1,41 @@
+@keyframes animacao-caixa {
+    from {
+        background: red;
+    }
+    to {
+        background: green;
+    }
+}
+
+@keyframes animacao-segredo {
+    from {
+        color: black;
+    }
+    to {
+        color: red;
+    }
+}
+
+#caixa {
+    width: 300px;
+    height: 300px;
+    background: red;
+    animation-name: animacao-caixa;
+    animation-duration: 10s;
+}
+
+#segredo {
+    width: 400px;
+    height: 400px;
+    background: black;
+}
+
+#segredo p {
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    font-style: italic;
+    line-height: 400px;
+    animation-name: animacao-segredo;
+    animation-duration: 7s;
+}
