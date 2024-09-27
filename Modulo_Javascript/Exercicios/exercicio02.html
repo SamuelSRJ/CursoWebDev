@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+<body>
+
+    <script>
+        var nome = prompt('Digite o seu nome: ')
+        var altura = parseFloat(prompt('Digite a sua altura em centimetros: '))
+        var peso = parseFloat(prompt('Digite o seu peso: '))
+        var classificacao = ''
+
+        altura = altura / 100
+        var m = peso / (altura * altura)
+
+        document.write(`<h1>Olá, ${nome} </h1>`)
+        document.write(`-- FICHA TÉCNICA --<br>`)
+        document.write(`Altura: ${altura} (${altura * 100}cm)<br>`)
+        document.write(`Peso: ${peso} Kg<br>`)
+
+        if (m < 16) {
+            document.write('Status: Baixo peso muito grave')
+            classificacao = 'Status: Baixo peso muito grave'
+        } else if (m < 17) {
+            document.write('Status: Baixo peso grave')
+            classificacao = 'Status: Baixo peso grave'
+        } else if (m < 18.50) {
+            document.write('Status: Baixo peso')
+            classificacao = 'Status: Baixo peso'
+        } else if (m < 25) {
+            document.write('Status: Peso normal')
+            classificacao = 'Status: Peso normal'
+        } else if (m < 30) {
+            document.write('Status: Sobrepeso')
+            classificacao = 'Status: Sobrepeso'
+        } else if (m < 35) {
+            document.write('Status: Obesidade grau I')
+            classificacao = 'Status: Obesidade grau I'
+        } else if (m < 40) {
+            document.write('Status: Obesidade grau II')
+            classificacao = 'Status: Obesidade grau II'
+        } else if (m >= 40) {
+            document.write('Status: Obesidade grau III')
+            classificacao = 'Status: Obesidade grau III'
+        }
+        
+        document.write(`<br><br>${nome} possui índice de massa comportal igual a ${m}, sendo classificado como: ${classificacao}`)
+    </script>
+</body>
+</html>
