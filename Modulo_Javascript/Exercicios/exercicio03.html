@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+<body>
+    <h1>Calculadora de + e -</h1>
+    <script>
+        function calcular(num1, num2, operacao) {
+            if(operacao == 'soma'){
+                return num1 + num2
+            } else if (operacao == 'subtracao') {
+                return num1 - num2
+            }
+        }
+
+        var num1 = parseInt(prompt('Digite o primeiro número: '))
+        var num2 = parseInt(prompt('Digite o segundo número: '))
+        var operacao = prompt('Soma ou Subtração?')
+        document.write('O resultado é: ' + calcular(num1, num2, operacao))
+    </script>
+</body>
+</html>

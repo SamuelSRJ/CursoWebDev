@@ -19,6 +19,27 @@
         document.write(data.getFullYear())
         document.write('<br>')
 
+        // Acrescentando dias, meses e anos
+        document.write('<hr><br>')
+        document.write(data.toString())
+        data.setDate(data.getDate()+ 720)
+        document.write('<hr>')
+        document.write(data.toString())
+        document.write('<br><br><hr>')
+
+        // Adicionar / Remover meses
+        document.write(data.toString())
+        data.setMonth(data.getMonth()+1)
+        document.write('<hr>')
+        document.write(data.toString())
+
+        // Adicionar / Remover anos
+        document.write('<br><br>')
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear()-1)
+        document.write('<hr>')
+        document.write(data.toString())
+
     </script>
 </head>
 <body>
