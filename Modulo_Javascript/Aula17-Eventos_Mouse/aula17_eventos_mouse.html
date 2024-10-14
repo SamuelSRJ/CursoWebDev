@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Mouse</title>
+    <script>
+        /*
+            onclick - Evento quando o mouse é clicado;
+            ondblclick - Evento quando o mouse é clicado duas vezes;
+            onmouseup - Evento quando o mouse clica e solta;
+            onmouseover - Evento quando o mouse sobrepoe o elemento;
+            onmouseout - Evento quando o mouse deixa a região da página do elemento;
+        */
+
+        function acao() {
+            alert('Evento disparado!')
+        }
+        function doubleclick() {
+            alert('Evento de duplo clique')
+        }
+        function soltarmouse() {
+            alert('Evento de soltar o clique')
+        }
+        function mouseover() {
+            alert('Evento do mouse sobre o elemento')
+        }
+        function mouseout() {
+            alert('Mouse saiu')
+        }
+    </script>
+</head>
+<body>
+    <div onclick="acao()" style="background: #ccc; height: 150px; width: 150px;">ONCLICK</div>
+    <div ondblclick="doubleclick()" style="background: red; height: 150px; width: 150px;">ONDBLCLICK</div>
+    <div onmouseup="acao()" style="background: blue; height: 150px; width: 150px;">ONMOUSEUP</div>
+    <div onmouseover="acao()" style="background: green; height: 150px; width: 150px;">ONMOUSEOVER</div>
+    <div onmouseout="acao()" style="background: yellow; height: 150px; width: 150px;">ONMOUSEOUT</div>
+</body>
+</html>
