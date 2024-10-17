@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Manipulando estilos de elementos</title>
+</head>
+<body>
+    <h1>Manipulando estilo</h1>
+    <button type="button" id="btn_red" onclick="alterarCor('red')">Vermelho</button>
+    <button type="button" id="btn_green" onclick="alterarCor('green')">Verde</button>
+    <button type="button" id="btn_azul" onclick="alterarCor('blue')">Azul</button>
+    <hr>
+    <div style="background: gray; border: 1px solid black; width: 250px; height: 250px;" id="obj"></div>
+    <script>
+        function alterarCor(cor) {
+            document.getElementById('obj').style.background = cor
+        }
+    </script>
+</body>
+</html>

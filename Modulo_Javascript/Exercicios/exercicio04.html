@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+<body>
+    <input type="text" id="txtTexto" onfocus="focar('txtTexto')" onblur="validarCampo('txtTexto')">
+    <input type="text" id="txtTexto2" onfocus="focar('txtTexto2')">
+    
+    <script>
+        function focar(id) {
+            document.getElementById(id).style.background = 'yellow'
+        }
+
+        function validarCampo(id) {
+            var conteudo = document.getElementById(id).value
+            if (conteudo.length < 3) {
+                document.getElementById(id).style.background = 'red'
+            } else {
+                document.getElementById(id).style.background = 'green'
+            }
+        }
+    </script>
+</body>
+</html>
