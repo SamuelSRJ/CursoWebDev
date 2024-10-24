@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+    <h1>Lista personalizada</h1>
+    <input id="txtObjeto" type="text" placeholder="Digite um objeto...">
+    <button id="btnAdicionar" onclick="adicionar()">Adicionar</button>
+    <button id="bntOrdenar" onclick="ordenar()">Ordenar</button>
+    <br><hr>
+    <p id="res">Resultado: </p>
+
+
+    <script>
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+        function adicionar() {
+            var objeto = document.getElementById('txtObjeto').value
+            if(objeto != '') {
+                var aux = objetos.indexOf(objeto)
+                if(aux === -1) {
+                    objetos.push(objeto)
+                    document.getElementById('txtObjeto').value = ''
+                    console.log(objetos)
+                } else {
+                    alert('Objeto já existe dentro do Array')
+                    document.getElementById('txtObjeto').value = ''
+                    console.log(objetos)
+                }
+            } else {
+                alert('Campo de texto vazio. Digite algum objeto')
+            }
+        }
+
+        function ordenar() {
+            objetos.sort()
+            console.log(objetos)
+            document.getElementById('txtObjeto').value = ''
+            document.getElementById('res').innerHTML += objetos
+        }
+    </script>
+</body>
+</html>
