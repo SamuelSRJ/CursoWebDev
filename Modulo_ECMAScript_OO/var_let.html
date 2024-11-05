@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAR e LET</title>
+    <script>
+        // 3 Escopos: global, função e bloco
+
+        function x() {
+            console.log(`Dentro da função: ${serie}`)
+            if(true) {
+
+            }
+        }
+
+        if(true) {
+            var serie = 'The Walking Dead'
+            x()
+            console.log(serie)
+        }
+        
+        console.log(serie)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
