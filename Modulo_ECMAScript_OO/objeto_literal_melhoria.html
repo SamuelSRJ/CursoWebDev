@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objeto Literal</title>
+        <script>
+            let nome = 'Samuel'
+            let idade = '25'
+            let sexo = 'masculino'
+            let profissao = 'Desenvolvedor'
+
+            let objeto = {
+                nome: nome,
+                idade: idade,
+                sexo: sexo,
+                profissao: profissao,
+                exibirResumo: function() {
+                    console.log(`${this.nome} é do sexo ${this.sexo}, possui ${this.idade} anos de idade e é ${this.profissao}`)
+                }
+            }
+
+            objeto.exibirResumo()
+
+            let objeto2 = {
+                nome,
+                idade,
+                sexo,
+                profissao,
+                exibirResumo() {
+                    console.log(`${this.nome} é do sexo ${this.sexo}, possui ${this.idade} anos de idade e é ${this.profissao}`)
+                }
+            }
+
+            objeto2.exibirResumo()
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

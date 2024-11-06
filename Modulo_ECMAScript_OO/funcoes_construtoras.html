@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções Construtoras</title>
+        <script>
+            let Carro = function() {
+                this.carro = 'Amarelo'
+                this.modelo = 'Chevette'
+                this.velocidadeAtual = 0
+                this.velocidadeMaxima = 180
+
+                this.acelerar = function() {
+                    // let velocidade = this.getVelocidadeAtual()
+                    // this.setVelocidadeAtual(velocidade += 10)
+                    this.setVelocidadeAtual(this.getVelocidadeAtual() + 10)
+                }
+
+                this.getVelocidadeAtual = function() {
+                    return this.velocidadeAtual
+                }
+
+                this.setVelocidadeAtual = function(velocidade) {
+                    return this.velocidadeAtual = velocidade
+                }
+            }
+
+            let carro = new Carro()
+            console.log(`A velocidade atual é de ${carro.getVelocidadeAtual()}`)
+            carro.acelerar()
+            console.log(`A velocidade atual é de ${carro.getVelocidadeAtual()}`)
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

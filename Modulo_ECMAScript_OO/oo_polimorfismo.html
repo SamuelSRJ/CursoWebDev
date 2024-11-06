@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação a Objeto: Herança</title>
+    <script>
+        class Animal {
+            constructor(cor, tamanho, peso) {
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+
+            dormir() {
+                console.log('Dormiu')
+            }
+        }
+
+        class Passaro extends Animal{
+            constructor(bico, cor, tamanho, peso) {
+                super(cor, tamanho, peso)
+                this.bico = bico
+            }
+
+            voar() {
+                console.log('Voou')
+            }
+        }
+
+        class Papagaio extends Passaro {
+            constructor(sabeFalar, bico, cor, tamanho, peso) {
+                super(bico, cor, tamanho, peso)
+                this.sabeFalar = sabeFalar
+            }
+
+            falar() {
+                console.log('Falou')
+            }
+        }
+
+        class Avestruz extends Passaro{
+            constructor(bico, cor, tamanho, peso) {
+                super(bico, cor, tamanho, peso)
+            }
+
+            enterrarCabeca() {
+                console.log('Enterrou a cabeça')
+            }
+
+            voar() {
+                console.log('Não sabe voar')
+            }
+        }
+
+        let papagaio = new Papagaio(true, 'Curto', 'Verde', 35, 350)
+        console.log(papagaio)
+
+        papagaio.voar()
+
+        let avestruz = new Avestruz('Grande', 'Branco', 190, 25000)
+        console.log(avestruz)
+        avestruz.voar()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

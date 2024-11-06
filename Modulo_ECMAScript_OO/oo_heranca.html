@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação a Objeto: Herança</title>
+    <script>
+        class Animal {
+            constructor() {
+                this.cor = ''
+                this.tamanho = null
+            }
+
+            dormir() {
+                console.log('Dormiu')
+            }
+        }
+
+        class Cachorro extends Animal {
+            constructor() {
+                super()
+                this.orelhas = 'Grandes e caidas'
+            }
+
+            correr() {
+                console.log('Correu')
+            }
+
+            rosnar() {
+                console.log('Rosnou')
+            }
+        }
+
+        class Passaro extends Animal{
+            constructor() {
+                super()
+                this.bico = 'Curto'
+            }
+
+            voar() {
+                console.log('Voou')
+            }
+        }
+
+        class Papagaio extends Passaro {
+            constructor() {
+                super()
+                this.sabeFalar = true
+            }
+
+            falar() {
+                console.log('Falou')
+            }
+        }
+
+        let cachorro = new Cachorro()
+        let passaro = new Passaro()
+        let papagaio = new Papagaio()
+
+        cachorro.dormir()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
