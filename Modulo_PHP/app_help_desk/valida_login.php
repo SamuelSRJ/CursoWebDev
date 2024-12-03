@@ -1,6 +1,8 @@
 <?php
+    session_start();
+
     // Variavel de autenticação
-    $usuarop_autenticado = false;
+    $usuario_autenticado = false;
 
     // Usuarios do Sistema
     $usuarios_app = array(
@@ -10,14 +12,16 @@
 
     foreach($usuarios_app as $user) {
         if($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']) {
-            $usuarop_autenticado = true;
+            $usuario_autenticado = true;
         }
     }
 
-    if($usuarop_autenticado) {
+    if($usuario_autenticado) {
         echo 'Usuário autenticado!';
+        $_SESSION['autenticado'] = 'SIM';
     } else {
-        echo 'Falha na autenticação do usuário!';
+        $_SESSION['autenticado'] = 'NAO';
+        header('Location: index.php?login=erro');
     }
 //     print_r($_GET);
 
