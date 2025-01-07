@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JQuery - Selecionando elementos Parte I</title>
+
+        <!-- Link script CDN do JQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>Selecionando elementos parte 1</h1>
+
+        <div>Div 1</div>
+        <div class="diversos1">Div 2</div>
+
+        <ul>
+            <li>Menu 1 - Item 1</li>
+            <li class="diversos1">Menu 1 - Item 2</li>
+            <li>Menu 1 - Item 3</li>
+        </ul>
+
+        <ul>
+            <li class="itemMenu2">Menu 1 - Item 1</li>
+            <li class="itemMenu2">Menu 1 - Item 2</li>
+            <li class="itemMenu2">Menu 1 - Item 3</li>
+        </ul>
+
+        <input type="text" placeholder="Campo 1">
+
+        <select class="diversos1">
+            <option>-- Selecione uma opção --</option>
+            <option>Opção 1</option>
+            <option>Opção 2</option>
+        </select>
+
+        <br>
+
+        <img src="https://picsum.photos/250/188" alt="">
+    </body>
+
+    <script>
+        console.log($('h1'))
+        console.log($('div'))
+
+        console.log($('.itemMenu2'))
+
+        console.log($('.diversos1'))
+
+    </script>
+</html>
