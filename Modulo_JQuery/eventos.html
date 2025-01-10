@@ -116,25 +116,26 @@
 				})
 
 				// FORMULÁRIO
-				$('#nome').focus((e) => {
+				$('#nome, #email').focus((e) => {
 					console.log('Esse elemento HTML recebeu foco')
 					$(e.target).addClass('inputFocado')
 				})
 
-				$('#email').focus((e) => {
-					console.log('Esse elemento HTML recebeu foco')
-					$(e.target).addClass('inputFocado')
-				})
+				// É possivel omitir esse comando pois já esta sendo feito no comando acima
+				// $('#email').focus((e) => {
+				// 	console.log('Esse elemento HTML recebeu foco')
+				// 	$(e.target).addClass('inputFocado')
+				// })
 
-				$('#nome').blur((e) => {
+				$('#nome, #email').blur((e) => {
 					console.log('Esse elemento HTML perdeu foco')
 					$(e.target).removeClass('inputFocado')
 				})
 
-				$('#email').blur((e) => {
-					console.log('Esse elemento HTML perdeu foco')
-					$(e.target).removeClass('inputFocado')
-				})
+				// $('#email').blur((e) => {
+				// 	console.log('Esse elemento HTML perdeu foco')
+				// 	$(e.target).removeClass('inputFocado')
+				// })
 
 				// FORMULÁRIO
 				$('#opcao').change(() => {
