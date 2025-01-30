@@ -23,7 +23,7 @@
         }
 
         public function sobreNos() {
-            // $this->view->dados = array('Notebook', 'Smartphone');
+            $this->view->dados = array('Notebook', 'Smartphone');
             $this->render('sobreNos', 'layout1');
         }
 

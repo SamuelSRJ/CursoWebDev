@@ -10,7 +10,10 @@
         }
 
         public function getProdutos() {
-            return array('Mesa', 'Cadeira');
+            
+            $query = "select id, descricao, preco from tb_produtos";
+            return $this->db->query($query)->fetchAll();
+
         }
     }
 
