@@ -1,0 +1,46 @@
+/* For */
+/* through e to */
+/* while */
+.item-1 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+.item-2 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+.item-3 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+.item-4 {
+  background: orange;
+  margin-bottom: 2px;
+}
+
+/* each */
+.item-1 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+.item-2 {
+  background: yellow;
+  margin-bottom: 2px;
+}
+
+.item-3 {
+  background: red;
+  margin-bottom: 2px;
+}
+
+/* Outras funcoes */
+.alerta {
+  background: rgb(204, 157.6, 0);
+  color: yellow;
+}
+
+/*# sourceMappingURL=style.css.map */
