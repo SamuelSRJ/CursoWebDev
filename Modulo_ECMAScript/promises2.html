@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>titulo</title>
+</head>
+<body>
+    <script>
+
+        let promessa = new Promise(() => {
+            // try {
+
+            // } catch(e) {
+
+            // }
+            // Requisição HTTP para recuperar uma relação de usuários
+            setTimeout(()=> {
+
+                // Requisição foi realizada de algum modo
+                let resposta_da_requisicao = {}
+
+                // Erro na requisição
+                if(false) {
+
+                    resposta_da_requisicao = {
+                        codigo: 1050,
+                        erro: 'Falha de autorização'
+                    }
+
+                    reject(resposta_da_requisicao)
+
+                }
+
+                resposta_da_requisicao = {
+                    0: { id: 1, nome: 'João' },
+                    1: { id: 2, nome: 'Maria' },
+                    2: { id: 3, nome: 'José' }
+                }
+
+                resolve(resposta_da_requisicao)
+
+            }, 4000)
+
+        })
+        .then(dados => {
+            console.log('Operação sequencial: ', dados)
+        })
+
+    </script>
+
+</body>
+</html>

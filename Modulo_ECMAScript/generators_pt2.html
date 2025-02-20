@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators - Parte 2</title>
+</head>
+<body>
+    <script>
+
+        function* conversar() {
+            let opcao = yield 'E ai, tudo bem?'
+
+            // O parametro enviado no next() é atribuido a variável opcao
+            if(opcao == 'sim'){
+                yield 'Ótimo, fico feliz!'
+                document.getElementById('resposta').value = ''
+
+                opcao = yield 'Quer que eu conte uma piada?'
+
+                if(opcao == 'sim') {
+                    fetch('dados/piadas.json')
+                        .then(response => response.json()) // Transforma a resposta em JSON
+                        .then(piadas => { // Recebe o JSON
+                            let piada = piadas[(Math.floor(Math.random() * piadas.length))]
+
+                            console.log(piada.piada)
+
+                            setTimeout(() => {
+                                console.log(piada.resposta)
+                            }, 4000)
+                        })
+                } else if(opcao == 'não') {
+                    yield 'Ok, encerrando a conversa...'
+                }
+            } else if(opcao == 'não') {
+                yield 'Que pena, o que houve?'
+            }
+
+        }
+
+        let conversa = conversar() // Objeto iterador
+
+        function acao() {
+            let resposta = document.getElementById('resposta').value
+            let iteracao = conversa.next(resposta)
+            console.log(iteracao)
+
+            if(iteracao.done) {
+                document.getElementById('botao').disabled = true
+                document.getElementById('resposta').disabled = true
+            }
+        }
+
+    </script>
+    <div id="teste">
+        <button type="button" onclick="acao()" id="botao">Avançar</button>
+        Resposta: <input type="text" id="resposta">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+<body>
+    <script>
+
+        function* testeGenerator() { // * indica que é um generator
+            console.log('Teste 1')
+            yield console.log('Teste 2') // Cria uma pausa/checkpoint na função. O primeiro next() executa até o yield
+            console.log('Teste 3')
+
+            return 'Teste 4'
+        }
+
+        let meuGenerator = testeGenerator () // Objeto iterador
+        console.log(meuGenerator)
+
+        meuGenerator.next() // Executa até o yield
+        console.log('-----------------')
+        meuGenerator.next()
+
+    </script>
+</body>
+</html>

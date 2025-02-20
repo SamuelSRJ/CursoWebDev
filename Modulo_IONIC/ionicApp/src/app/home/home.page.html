@@ -1,4 +1,5 @@
-<!-- Para iniciar basta rodar "ionic serve" no terminal dentro da pasta do projeto -->>
+<!-- Para iniciar basta rodar "ionic serve" no terminal dentro da pasta do projeto -->
+<!-- Para criar novas páginas "ionic generate page nome_pagina" no terminal dentro da pasta do projeto -->
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
@@ -8,6 +9,100 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
+
+  <h4 class="ion-text-center">Grid</h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="9">Conteudo 1</ion-col>
+      <ion-col size="3">Conteudo 2</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">Conteudo 1</ion-col>
+      <ion-col size="4">Conteudo 2</ion-col>
+      <ion-col size="4">Conteudo 3</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h4 class="ion-text-center">Grid - Offset</h4>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">Conteudo 1</ion-col>
+      <ion-col size="3" offset="3">Conteudo 2</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h4 class="ion-text-center">Grid - Alinhamento textos</h4>
+  <ion-grid>
+    <ion-row class="ion-text-end">
+      <ion-col size="4">1</ion-col>
+      <ion-col size="4">2</ion-col>
+      <ion-col size="4">3</ion-col>
+    </ion-row>
+  </ion-grid>
+  <h4 class="ion-text-center">Grid - Alinhamento vertical</h4>
+  <ion-grid>
+    <ion-row class="ion-align-items-start">
+      <ion-col size="4">1</ion-col>
+      <ion-col size="4">2</ion-col>
+      <ion-col size="4">3 <br> + <br> +</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="4">1</ion-col>
+      <ion-col size="4">2</ion-col>
+      <ion-col size="4">3 <br> + <br> +</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="ion-align-items-end">
+      <ion-col size="4">1</ion-col>
+      <ion-col size="4">2</ion-col>
+      <ion-col size="4">3 <br> + <br> +</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h4>Entrada de dados</h4> 
+  <ion-item>
+    <ion-label position="stacked">Seu nome:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <h4>Entrada de dados (valores)</h4>
+  <ion-item>
+    <ion-input clearInput placeholder="Digite seu nome"></ion-input>
+  </ion-item>
+
+  <h4>Tipos de dados</h4> 
+  <ion-item>
+    <ion-label position="stacked">Text:</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Número:</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Senha:</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Email:</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Telefone:</ion-label>
+    <ion-input type="tel"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">URL:</ion-label>
+    <ion-input type="url"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Busca:</ion-label>
+    <ion-input type="search"></ion-input>
+  </ion-item>
+  <ion-button expand="full">Cadastrar</ion-button>
 
   <h4>Listas</h4>
   <ion-list>
@@ -111,15 +206,15 @@
       <ion-label>2. Lorem ipsum dolor sit amet</ion-label>
     </ion-item>
 
+  </ion-card> 
+
+
+  <ion-card>
+    <ion-img src="https://picsum.photos/seed/earth/800/600"></ion-img>
   </ion-card>
 
 
-  <!-- <ion-card>
-    <ion-img src="https://picsum.photos/seed/earth/800/600"></ion-img>
-  </ion-card> -->
-
-
-  <!-- <h4>Botões</h4>
+  <h4>Botões</h4>
   <ion-button>Padrão</ion-button>
   <ion-button href="http://google.com.br">Link</ion-button>
 
@@ -166,7 +261,7 @@
   <h4>Tamanhos</h4>
   <ion-button size="large">Grande</ion-button>
   <ion-button>Padrão</ion-button>
-  <ion-button size="small">Pequeno</ion-button> -->
+  <ion-button size="small">Pequeno</ion-button> 
 
 
 </ion-content>
