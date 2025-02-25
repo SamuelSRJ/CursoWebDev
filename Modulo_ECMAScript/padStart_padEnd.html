@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PadStart - PadEnd</title>
+</head>
+<body>
+    <script>
+
+        let data = '1/5/2025'
+        let dia = data.split('/')[0]
+        let mes = data.split('/')[1]
+        let ano = data.split('/')[2]
+
+        if(dia < 10) {
+            dia = dia.padStart(2,'0') // Quantidade total de numeros que deve ter, caracter a ser repetido na esquerda
+        }
+
+        if(mes < 10) {
+            mes = mes.padStart(2,'0')
+        }
+
+        console.log(`${dia}/${mes}/${ano}`)
+        
+        
+
+    </script>
+
+</body>
+</html>

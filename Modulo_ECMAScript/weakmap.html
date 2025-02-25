@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>titulo</title>
+</head>
+<body>
+    <script>
+
+        obj1 = {
+            nome: "Maria Sant Ana",
+            profissao: "Programador Senior",
+        }
+
+        obj2 = {
+            nome: "Maria Silva",
+            profissao: "CEO",
+        }
+
+        // WeakMap -> Referencia e Vazamento de Memória
+
+        const objetos = [obj1, obj2];
+
+        console.log("Original");
+        objetos.map((value, index) => console.log(index, value));
+
+        // obj2.nome = "João Brandão";
+        objetos[1].nome = "João Brandão";
+
+        console.log("Resultado");
+        objetos.map((value, index) => console.log(index, value));
+
+        console.log(obj2);
+
+    </script>
+
+</body>
+</html>

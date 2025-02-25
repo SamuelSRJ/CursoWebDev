@@ -8,7 +8,7 @@
 <body>
     <script>
 
-        let promessa = new Promise(() => {
+        let promessa = new Promise((resolve, reject) => {
             // try {
 
             // } catch(e) {
@@ -21,7 +21,7 @@
                 let resposta_da_requisicao = {}
 
                 // Erro na requisição
-                if(false) {
+                if(true) {
 
                     resposta_da_requisicao = {
                         codigo: 1050,
@@ -29,7 +29,7 @@
                     }
 
                     reject(resposta_da_requisicao)
-
+                    return
                 }
 
                 resposta_da_requisicao = {
@@ -43,8 +43,10 @@
             }, 4000)
 
         })
-        .then(dados => {
+        promessa.then(dados => {
             console.log('Operação sequencial: ', dados)
+        }).catch(erro => {
+            console.log('Erro: ', erro)
         })
 
     </script>

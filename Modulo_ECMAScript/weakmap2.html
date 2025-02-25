@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>titulo</title>
+</head>
+<body>
+    <script>
+
+        obj1 = {
+            nome: "Maria Sant Ana",
+            profissao: "Programador Senior",
+        }
+
+        obj2 = {
+            nome: "Maria Silva",
+            profissao: "CEO",
+        }
+
+        // Coleção WeakMap
+        const objetos = new WeakMap();
+
+        objetos.set(obj1, "Informações do objeto 1");
+        objetos.set(obj2, "Informações do objeto 2");
+
+        // Não podemos percorrer esse WeakMap
+        console.log(objetos);
+
+        obj1 = null;
+
+        console.log(objetos); // GC
+
+    </script>
+
+</body>
+</html>
